@@ -11,16 +11,40 @@ class FrenchVerbRegER(FrenchVerb):
         result = self.verb[:-2]
         if not person.is_plural:
             if person == FIRST_PERSON:
-                result += "e"
+                result += self.get_first_sing_person_ending()
             elif person == SECOND_PERSON:
-                result += "es"
+                result += self.get_second_sing_person_ending()
             else:
-                result += "e"
+                result += self.get_third_sing_person_ending()
         else:
             if person == FIRST_PERSON:
-                result += "ons"
+                result += self.get_first_plur_person_ending()
             elif person == SECOND_PERSON:
-                result += "ez"
+                result += self.get_second_plur_person_ending()
             else:
-                result += "ent"
+                result += self.get_third_plur_person_ending()
         return result
+
+    @staticmethod
+    def get_first_sing_person_ending():
+        return "e"
+
+    @staticmethod
+    def get_second_sing_person_ending():
+        return "es"
+
+    @staticmethod
+    def get_third_sing_person_ending():
+        return "e"
+
+    @staticmethod
+    def get_first_plur_person_ending():
+        return "ons"
+
+    @staticmethod
+    def get_second_plur_person_ending():
+        return "ez"
+
+    @staticmethod
+    def get_third_plur_person_ending():
+        return "ent"
