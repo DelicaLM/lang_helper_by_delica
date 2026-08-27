@@ -23,3 +23,4 @@ class FrenchVerbRegER(FrenchVerb):
                 result += "ez"
             else:
                 result += "ent"
+        return result
