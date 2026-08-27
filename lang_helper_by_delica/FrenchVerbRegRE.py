@@ -2,8 +2,8 @@ from lang_helper_by_delica.FrenchVerb import FrenchVerb
 from lang_constants import FIRST_PERSON, SECOND_PERSON, THIRD_PERSON, PERSON_OPTIONS
 
 class FrenchVerbRegRE(FrenchVerb):
-    def __init__(self, verb):
-        super().__init__(verb)
+    def __init__(self, verb, english_def):
+        super().__init__(verb, english_def)
 
     def conjugate(self, person, is_plural=False):
         assert len(self.verb) > 2
