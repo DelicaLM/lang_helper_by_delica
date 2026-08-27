@@ -1,4 +1,4 @@
-from .new_python_funcs import *
+from .Word import *
 from importlib.metadata import version, PackageNotFoundError
 
 __version__ = "unknown"
@@ -7,4 +7,4 @@ try:
 except PackageNotFoundError:
     pass
 
-__all__ = ["new_python_funcs"]
+__all__ = ["Word.py"]
