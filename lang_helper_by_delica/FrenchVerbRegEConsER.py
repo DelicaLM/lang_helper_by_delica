@@ -9,7 +9,8 @@ class FrenchVerbRegEConsER(FrenchVerbRegER):
         result = super().conjugate(person, is_plural)
         if not is_plural or person == THIRD_PERSON:
             assert len(result) > 3
-            result[-4] = "è"
+            verb_len = len(self.verb)
+            result = result[:verb_len-4] + "è" + result[verb_len-3:]
         return result
 
 

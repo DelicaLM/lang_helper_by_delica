@@ -8,11 +8,10 @@ class FrenchVerbRegGER(FrenchVerbRegER):
     def conjugate(self, person, is_plural=False):
         result = super().conjugate(person, is_plural)
         if person == FIRST_PERSON and is_plural:
-            assert len(self.verb) > 3
-            result = self.verb[:-1] + self.get_first_plur_person_ending()
+            result = self.verb[:-2] + self.get_first_plur_person_ending()
         return result
 
     @staticmethod
     def get_first_plur_person_ending():
-        return "çons"
+        return "eons"
 

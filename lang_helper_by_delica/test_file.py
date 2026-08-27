@@ -1,8 +1,10 @@
 from lang_helper_by_delica.FrenchVerbRegER import FrenchVerbRegER
 from lang_helper_by_delica.FrenchVerbRegCER import FrenchVerbRegCER
-from lang_helper_by_delica.FrenchVerbRegCER import FrenchVerbRegCER
+from lang_helper_by_delica.FrenchVerbRegGER import FrenchVerbRegGER
+from lang_helper_by_delica.FrenchVerbRegELER import FrenchVerbRegELER
+from lang_helper_by_delica.FrenchVerbRegEConsER import FrenchVerbRegEConsER
 
-test_verb = FrenchVerbRegCER("commencer", "to sing")
+test_verb = FrenchVerbRegEConsER("acheter")
 conj1_je = test_verb.conjugate(1, False)
 conj2_tu = test_verb.conjugate(2, False)
 conj3_on = test_verb.conjugate(3, False)

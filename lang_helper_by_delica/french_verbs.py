@@ -1,6 +1,7 @@
 from lang_helper_by_delica.FrenchVerbRegCER import FrenchVerbRegCER
 from lang_helper_by_delica.FrenchVerbRegELER import FrenchVerbRegELER
 from lang_helper_by_delica.FrenchVerbRegGER import FrenchVerbRegGER
+from lang_helper_by_delica.FrenchVerbRegEConsER import FrenchVerbRegEConsER
 from lang_helper_by_delica.FrenchVerbRegER import FrenchVerbRegER
 from lang_helper_by_delica.FrenchVerbRegIR import FrenchVerbRegIR
 from lang_helper_by_delica.FrenchVerbRegRE import FrenchVerbRegRE
@@ -23,7 +24,6 @@ french_reg_er_verbs = [FrenchVerbRegRE("accepter", "to accept"),
                        FrenchVerbRegRE("dessiner", "to draw"),
                        FrenchVerbRegRE("donner", "to give"),
                        FrenchVerbRegRE("emprunter", "to borrow"),
-                       FrenchVerbRegRE("enlever", "to remove"),
                        FrenchVerbRegRE("étudier", "to study"),
                        FrenchVerbRegRE("exprimer", "to express"),
                        FrenchVerbRegRE("gagner", "to win"),
@@ -92,9 +92,30 @@ french_reg_ger_verbs = [FrenchVerbRegGER("bouger", "to move"),
                         FrenchVerbRegGER("voyager", "to travel"),]
 
 french_reg_eler_verbs = [FrenchVerbRegELER("appeler", "to call"),
+                         FrenchVerbRegELER("épeler", "to spell"),
                          FrenchVerbRegELER("ensorceler", "to bewitch"),
                          FrenchVerbRegELER("étinceler", "to sparkle/glitter"),
                          FrenchVerbRegELER("ficeler", "to tie/bind"),
                          FrenchVerbRegELER("niveler", "to level"),
                          FrenchVerbRegELER("rappeler", "to remind/call back/recall"),
                          FrenchVerbRegELER("renouveler", "to renew"),]
+
+french_reg_e_cons_er_verbs = [FrenchVerbRegEConsER("acheter", "to buy"),
+                              FrenchVerbRegEConsER("achever", "to complete"),
+                              FrenchVerbRegEConsER("céder", "to yield"),
+                              FrenchVerbRegEConsER("célébrer", "to celebrate"),
+                              FrenchVerbRegEConsER("considérer", "to consider"),
+                              FrenchVerbRegEConsER("déléguer", "to delegate"),
+                              FrenchVerbRegEConsER("emmener", "to take along/escort"),
+                              FrenchVerbRegEConsER("enlever", "to remove"),
+                              FrenchVerbRegEConsER("espérer", "to hope"),
+                              FrenchVerbRegEConsER("exagérer", "to exaggerate"),
+                              FrenchVerbRegEConsER("gérer", "to manage"),
+                              FrenchVerbRegEConsER("lécher", "to lich"),
+                              FrenchVerbRegEConsER("lever", "to raise"),
+                              FrenchVerbRegEConsER("mener", "to lead/carry out"),
+                              FrenchVerbRegEConsER("peser", "to weigh"),
+                              FrenchVerbRegEConsER("posséder", "to possess/own"),
+                              FrenchVerbRegEConsER("préférer", "to prefer"),
+                              FrenchVerbRegEConsER("révéler", "to reveal"),
+                              ]
