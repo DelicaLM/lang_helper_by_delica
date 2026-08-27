@@ -1,4 +1,5 @@
 from lang_helper_by_delica.FrenchVerbRegCER import FrenchVerbRegCER
+from lang_helper_by_delica.FrenchVerbRegGER import FrenchVerbRegGER
 from lang_helper_by_delica.FrenchVerbRegER import FrenchVerbRegER
 from lang_helper_by_delica.FrenchVerbRegIR import FrenchVerbRegIR
 from lang_helper_by_delica.FrenchVerbRegRE import FrenchVerbRegRE
@@ -27,7 +28,6 @@ french_reg_er_verbs = [FrenchVerbRegRE("accepter", "to accept"),
                        FrenchVerbRegRE("gagner", "to win"),
                        FrenchVerbRegRE("habiter", "to live"),
                        FrenchVerbRegRE("laver", "to wash"),
-                       FrenchVerbRegRE("manger", "to eat"),
                        FrenchVerbRegRE("mériter", "to deserve"),
                        FrenchVerbRegRE("oublier", "to forget"),
                        FrenchVerbRegRE("porter", "to carry"),
@@ -70,3 +70,22 @@ french_reg_cer_verbs = [FrenchVerbRegCER("annoncer", "to announce"),
                         FrenchVerbRegCER("remplacer", "to replace"),
                         FrenchVerbRegCER("renoncer", "to give up"),
                         ]
+
+french_reg_ger_verbs = [FrenchVerbRegGER("bouger", "to move"),
+                        FrenchVerbRegGER("changer", "to change"),
+                        FrenchVerbRegGER("corriger", "to correct"),
+                        FrenchVerbRegGER("dégager", "to clear/release/free"),
+                        FrenchVerbRegGER("déménager", "to move (change homes)"),
+                        FrenchVerbRegGER("encourager", "to encourage"),
+                        FrenchVerbRegGER("exiger", "to demand/require"),
+                        FrenchVerbRegGER("héberger", "to host/accommodate"),
+                        FrenchVerbRegGER("manger", "to eat"),
+                        FrenchVerbRegGER("mélanger", "to mix"),
+                        FrenchVerbRegGER("nager", "to swim"),
+                        FrenchVerbRegGER("négliger", "to neglect"),
+                        FrenchVerbRegGER("partager", "to share"),
+                        FrenchVerbRegGER("plonger", "to dive"),
+                        FrenchVerbRegGER("protéger", "to protect"),
+                        FrenchVerbRegGER("ranger", "to put away/tidy"),
+                        FrenchVerbRegGER("venger", "to avenge"),
+                        FrenchVerbRegGER("voyager", "to travel"),]
