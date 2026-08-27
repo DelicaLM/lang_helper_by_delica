@@ -11,16 +11,40 @@ class FrenchVerbRegIR(FrenchVerb):
         result = self.verb[:-2]
         if not person.is_plural:
             if person == FIRST_PERSON:
-                result += "is"
+                result += self.get_first_sing_person_ending()
             elif person == SECOND_PERSON:
-                result += "is"
+                result += self.get_second_sing_person_ending()
             else:
-                result += "it"
+                result += self.get_third_sing_person_ending()
         else:
             if person == FIRST_PERSON:
-                result += "issons"
+                result += self.get_first_plur_person_ending()
             elif person == SECOND_PERSON:
-                result += "issez"
+                result += self.get_second_plur_person_ending()
             else:
-                result += "issent"
+                result += self.get_third_plur_person_ending()
         return result
+
+    @staticmethod
+    def get_first_sing_person_ending():
+        return "is"
+
+    @staticmethod
+    def get_second_sing_person_ending():
+        return "is"
+
+    @staticmethod
+    def get_third_sing_person_ending():
+        return "it"
+
+    @staticmethod
+    def get_first_plur_person_ending():
+        return "issons"
+
+    @staticmethod
+    def get_second_plur_person_ending():
+        return "issez"
+
+    @staticmethod
+    def get_third_plur_person_ending():
+        return "issent"
