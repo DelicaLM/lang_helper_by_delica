@@ -1,4 +1,5 @@
 from lang_helper_by_delica.FrenchVerbRegCER import FrenchVerbRegCER
+from lang_helper_by_delica.FrenchVerbRegELER import FrenchVerbRegELER
 from lang_helper_by_delica.FrenchVerbRegGER import FrenchVerbRegGER
 from lang_helper_by_delica.FrenchVerbRegER import FrenchVerbRegER
 from lang_helper_by_delica.FrenchVerbRegIR import FrenchVerbRegIR
@@ -89,3 +90,11 @@ french_reg_ger_verbs = [FrenchVerbRegGER("bouger", "to move"),
                         FrenchVerbRegGER("ranger", "to put away/tidy"),
                         FrenchVerbRegGER("venger", "to avenge"),
                         FrenchVerbRegGER("voyager", "to travel"),]
+
+french_reg_eler_verbs = [FrenchVerbRegELER("appeler", "to call"),
+                         FrenchVerbRegELER("ensorceler", "to bewitch"),
+                         FrenchVerbRegELER("étinceler", "to sparkle/glitter"),
+                         FrenchVerbRegELER("ficeler", "to tie/bind"),
+                         FrenchVerbRegELER("niveler", "to level"),
+                         FrenchVerbRegELER("rappeler", "to remind/call back/recall"),
+                         FrenchVerbRegELER("renouveler", "to renew"),]
