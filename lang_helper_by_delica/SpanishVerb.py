@@ -1,7 +1,7 @@
-from lang_helper_by_delica.FrenchWord import FrenchWord
+from lang_helper_by_delica.SpanishWord import SpanishWord
 
 
-class FrenchVerb(FrenchWord):
+class SpanishVerb(SpanishWord):
     def __init__(self, verb, english_def=""):
         super().__init__(verb, english_def)
         self.verb = verb
