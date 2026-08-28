@@ -12,7 +12,7 @@ version_num = ""
 
 curr_directory = os.path.dirname(os.path.abspath(__file__))
 project_directory = os.path.dirname(os.path.dirname(curr_directory))
-init_directory = os.path.join(project_directory, "new_python_package/")
+init_directory = os.path.join(project_directory, "lang_helper_by_delica/")
 init_path = os.path.join(init_directory, "__init__.py")
 
 try:
@@ -60,7 +60,7 @@ napoleon_google_docstring = False
 napoleon_numpy_docstring = True
 
 autodoc2_packages = [
-    "../../new_python_package/new_python_funcs.py",
+    "../../lang_helper_by_delica/Word.py",
 "../../tests/test_new_python_funcs.py"
 ]
 #templates_path = ['_templates']
