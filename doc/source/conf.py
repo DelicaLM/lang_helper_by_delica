@@ -61,7 +61,10 @@ napoleon_numpy_docstring = True
 
 autodoc2_packages = [
     "../../lang_helper_by_delica/Word.py",
-"../../tests/test_new_python_funcs.py"
+"../../lang_helper_by_delica/FrenchWord.py",
+"../../lang_helper_by_delica/SpanishWord.py",
+"../../lang_helper_by_delica/Verb.py",
+"../../tests/test_french_verbs.py"
 ]
 #templates_path = ['_templates']
 exclude_patterns = []
