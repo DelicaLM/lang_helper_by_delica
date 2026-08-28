@@ -1,0 +1,12 @@
+class Word:
+    def __init__(self, word):
+        self.word = word
+
+    def __str__(self):
+        return self.word
+
+    def get_word(self):
+        return self.word
+
+    def print_word(self):
+        print(self.word)
