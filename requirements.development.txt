@@ -1,3 +1,4 @@
 -e .
 sphinx
 myst_parser
+setuptools
