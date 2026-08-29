@@ -40,7 +40,7 @@ class FrenchNoun(FrenchWord):
         if self.gender == FEMININE:
             self.def_article = "la"
         first_char = self.noun[0]
-        if first_char in FRENCH_VOWELS or first_char == "h" and is_aspirated:
+        if first_char in FRENCH_VOWELS or first_char == "h" and not is_aspirated:
             self.def_article = "l\'"
         if is_plural:
             self.def_article = "les"
