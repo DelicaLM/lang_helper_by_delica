@@ -4,7 +4,7 @@ from lang_helper_by_delica.FrenchVerbRegGER import FrenchVerbRegGER
 from lang_helper_by_delica.FrenchVerbRegELER import FrenchVerbRegELER
 from lang_helper_by_delica.FrenchVerbRegEConsER import FrenchVerbRegEConsER
 
-test_verb = FrenchVerbRegEConsER("acheter")
+test_verb = FrenchVerbRegER("aimer")
 conj1_je = test_verb.conjugate(1, False)
 conj2_tu = test_verb.conjugate(2, False)
 conj3_on = test_verb.conjugate(3, False)

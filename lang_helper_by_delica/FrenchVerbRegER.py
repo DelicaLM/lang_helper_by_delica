@@ -10,7 +10,7 @@ class FrenchVerbRegER(FrenchVerb):
     THIRD_PER_PLUR_END = "ent"
     def __init__(self, verb, english_def=""):
         assert len(verb) > 2
-        verb_root = verb[:,-2]
+        verb_root = verb[:-2]
         first_per_sing_form = verb_root + self.FIRST_PER_SING_END
         second_per_sing_form = verb_root + self.SECOND_PER_SING_END
         third_per_sing_form = verb_root + self.THIRD_PER_SING_END
