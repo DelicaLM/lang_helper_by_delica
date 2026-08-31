@@ -7,44 +7,44 @@ from lang_helper_by_delica.FrenchVerbRegIR import FrenchVerbRegIR
 from lang_helper_by_delica.FrenchVerbRegRE import FrenchVerbRegRE
 
 
-french_reg_er_verbs = [FrenchVerbRegRE("accepter", "to accept"),
-                       FrenchVerbRegRE("aimer", "to like/love"),
-                       FrenchVerbRegRE("annuler", "to cancel"),
-                       FrenchVerbRegRE("apporter", "to bring"),
-                       FrenchVerbRegRE("attraper", "to catch"),
-                       FrenchVerbRegRE("augmenter", "to increase"),
-                       FrenchVerbRegRE("bavarder", "to chat"),
-                       FrenchVerbRegRE("casser", "to break"),
-                       FrenchVerbRegRE("chanter", "to sing"),
-                       FrenchVerbRegRE("chercher", "to look for"),
-                       FrenchVerbRegRE("commander", "to order"),
-                       FrenchVerbRegRE("danser", "to dance"),
-                       FrenchVerbRegRE("déjeuner", "to have lunch"),
-                       FrenchVerbRegRE("demander", "to ask"),
-                       FrenchVerbRegRE("dessiner", "to draw"),
-                       FrenchVerbRegRE("donner", "to give"),
-                       FrenchVerbRegRE("emprunter", "to borrow"),
-                       FrenchVerbRegRE("étudier", "to study"),
-                       FrenchVerbRegRE("exprimer", "to express"),
-                       FrenchVerbRegRE("gagner", "to win"),
-                       FrenchVerbRegRE("habiter", "to live"),
-                       FrenchVerbRegRE("laver", "to wash"),
-                       FrenchVerbRegRE("mériter", "to deserve"),
-                       FrenchVerbRegRE("oublier", "to forget"),
-                       FrenchVerbRegRE("porter", "to carry"),
-                       FrenchVerbRegRE("prêter", "to lend"),
-                       FrenchVerbRegRE("refuser", "to refuse"),
-                       FrenchVerbRegRE("regarder", "to watch"),
-                       FrenchVerbRegRE("saluer", "to greet"),
-                       FrenchVerbRegRE("sauter", "to jump"),
-                       FrenchVerbRegRE("tomber", "to fall"),
-                       FrenchVerbRegRE("travailler", "to work"),
-                       FrenchVerbRegRE("visiter", "to visit (physical location)"),
-                       FrenchVerbRegRE("exprimer", "to express"),
-                       FrenchVerbRegRE("gagner", "to win"),
-                       FrenchVerbRegRE("habiter", "to live"),
-                       FrenchVerbRegRE("laver", "to wash"),
-                       FrenchVerbRegRE("manger", "to eat"),
+french_reg_er_verbs = [FrenchVerbRegER("accepter", "to accept"),
+                       FrenchVerbRegER("aimer", "to like/love"),
+                       FrenchVerbRegER("annuler", "to cancel"),
+                       FrenchVerbRegER("apporter", "to bring"),
+                       FrenchVerbRegER("attraper", "to catch"),
+                       FrenchVerbRegER("augmenter", "to increase"),
+                       FrenchVerbRegER("bavarder", "to chat"),
+                       FrenchVerbRegER("casser", "to break"),
+                       FrenchVerbRegER("chanter", "to sing"),
+                       FrenchVerbRegER("chercher", "to look for"),
+                       FrenchVerbRegER("commander", "to order"),
+                       FrenchVerbRegER("danser", "to dance"),
+                       FrenchVerbRegER("déjeuner", "to have lunch"),
+                       FrenchVerbRegER("demander", "to ask"),
+                       FrenchVerbRegER("dessiner", "to draw"),
+                       FrenchVerbRegER("donner", "to give"),
+                       FrenchVerbRegER("emprunter", "to borrow"),
+                       FrenchVerbRegER("étudier", "to study"),
+                       FrenchVerbRegER("exprimer", "to express"),
+                       FrenchVerbRegER("gagner", "to win"),
+                       FrenchVerbRegER("habiter", "to live"),
+                       FrenchVerbRegER("laver", "to wash"),
+                       FrenchVerbRegER("mériter", "to deserve"),
+                       FrenchVerbRegER("oublier", "to forget"),
+                       FrenchVerbRegER("porter", "to carry"),
+                       FrenchVerbRegER("prêter", "to lend"),
+                       FrenchVerbRegER("refuser", "to refuse"),
+                       FrenchVerbRegER("regarder", "to watch"),
+                       FrenchVerbRegER("saluer", "to greet"),
+                       FrenchVerbRegER("sauter", "to jump"),
+                       FrenchVerbRegER("tomber", "to fall"),
+                       FrenchVerbRegER("travailler", "to work"),
+                       FrenchVerbRegER("visiter", "to visit (physical location)"),
+                       FrenchVerbRegER("exprimer", "to express"),
+                       FrenchVerbRegER("gagner", "to win"),
+                       FrenchVerbRegER("habiter", "to live"),
+                       FrenchVerbRegER("laver", "to wash"),
+                       FrenchVerbRegER("manger", "to eat"),
                        ]
 
 
@@ -119,3 +119,19 @@ french_reg_e_cons_er_verbs = [FrenchVerbRegEConsER("acheter", "to buy"),
                               FrenchVerbRegEConsER("préférer", "to prefer"),
                               FrenchVerbRegEConsER("révéler", "to reveal"),
                               ]
+
+for french_verb in french_reg_ger_verbs:
+    je_conj = french_verb.conjugate(1, False)
+    tu_conj = french_verb.conjugate(2, False)
+    on_conj = french_verb.conjugate(3, False)
+    nous_conj = french_verb.conjugate(1, True)
+    vous_conj = french_verb.conjugate(2, True)
+    ils_conj = french_verb.conjugate(3, True)
+    print("Infinitive:", french_verb)
+    print("Je:", je_conj)
+    print("Tu:", tu_conj)
+    print("On/Il/Elle:", on_conj)
+    print("Nous:", nous_conj)
+    print("Vous:", vous_conj)
+    print("Ils/Elles:", ils_conj)
+    print("")
