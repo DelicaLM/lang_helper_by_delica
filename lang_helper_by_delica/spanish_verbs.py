@@ -1,5 +1,7 @@
 from lang_helper_by_delica.SpanishIrregularVerb import SpanishIrregularVerb
 from lang_helper_by_delica.SpanishIrregularARVerb import SpanishIrregularARVerb
+from lang_helper_by_delica.SpanishIrregularERVerb import SpanishIrregularERVerb
+from lang_helper_by_delica.SpanishIrregularIRVerb import SpanishIrregularIRVerb
 
 
 
@@ -14,4 +16,12 @@ estar = SpanishIrregularARVerb("estar", "to be (temporary states, locations)",
                                first_per_sing="estoy", second_per_sing="estás", third_per_sing="está",
                                third_per_plur="están")
 
-estar.print_conjugations()
+caber = SpanishIrregularERVerb("caber", "to fit", first_per_sing="quepo")
+caer = SpanishIrregularERVerb("caer", "to fit", first_per_sing="caigo")
+haber = SpanishIrregularERVerb("haber", "to have (e.g., to have done/to exist)", first_per_sing="he",
+                               second_per_sing="has", third_per_sing="ha", first_per_plur="hemos",
+                               third_per_plur="han",)
+
+conducir = SpanishIrregularIRVerb("conducir", "to drive", first_per_sing="conduzco")
+
+haber.print_conjugations()

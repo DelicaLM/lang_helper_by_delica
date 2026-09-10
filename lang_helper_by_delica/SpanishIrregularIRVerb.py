@@ -1,8 +1,8 @@
-from lang_helper_by_delica.SpanishVerbRegAR import SpanishVerbRegAR
+from lang_helper_by_delica.SpanishVerbRegIR import SpanishVerbRegIR
 from lang_constants import *
 
-class SpanishIrregularARVerb(SpanishVerbRegAR):
-    def __init__(self, verb, english_def="", verb_type=SPANISH_IRREGULAR_AR_VERB_TYPE,
+class SpanishIrregularIRVerb(SpanishVerbRegIR):
+    def __init__(self, verb, english_def="", verb_type=SPANISH_IRREGULAR_IR_VERB_TYPE,
                  first_per_sing=None, second_per_sing=None, third_per_sing=None,
                  first_per_plur=None, second_per_plur=None, third_per_plur=None):
         super().__init__(verb, english_def=english_def)
