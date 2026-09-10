@@ -9,5 +9,12 @@ class FrenchVerb(Verb):
                          first_per_plur, second_per_plur, third_per_plur)
         self.eng = english_def
 
-
-
+    def print_conjugations(self):
+        print(self.verb, f"({self.eng})")
+        print("Je", " "*7, self.first_per_sing)
+        print("Tu", " "*7, self.second_per_sing)
+        print("Il/Elle/On", self.third_per_sing)
+        print("Nous", " "*5, self.first_per_plur)
+        print("Vous", " "*5, self.second_per_plur)
+        print("Ils/Elles ", self.third_per_plur)
+        print("")
