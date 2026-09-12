@@ -3,9 +3,9 @@ from lang_constants import *
 
 
 class Verb(Word):
-    def __init__(self, verb, verb_type=BASIC_VERB_TYPE, first_per_sing=None, second_per_sing=None, third_per_sing=None,
+    def __init__(self, verb, english_def="", verb_type=BASIC_VERB_TYPE, first_per_sing=None, second_per_sing=None, third_per_sing=None,
                  first_per_plur=None, second_per_plur=None, third_per_plur=None,):
-        super().__init__(verb)
+        super().__init__(verb, english_def)
         self.verb = verb
         self.verb_type = verb_type
         self.first_per_sing = first_per_sing

@@ -1,15 +1,16 @@
-from lang_helper_by_delica.FrenchWord import FrenchWord
+from lang_helper_by_delica.Noun import Noun
 from lang_constants import *
 
 import error_helper_by_delica as error_lib
 
-class FrenchNoun(FrenchWord):
+class FrenchNoun(Noun):
     def __init__(self, noun, gender, english_def="", is_plural=False, is_aspirated=False, masc_form=None,
                  fem_form=None):
         error_lib.check_type(noun, str, "french noun")
         error_lib.check_value_is_in_set(gender, FRENCH_WORD_GENDERS, "french noun gender")
         error_lib.check_type(english_def, str, "french noun english definition")
         super().__init__(noun, english_def)
+        self.eng = english_def
         assert len(noun) > 0
         self.noun = noun.lower()
         self.gender = gender
@@ -51,7 +52,6 @@ class FrenchNoun(FrenchWord):
             self.demonstrative_article = "cette"
         if is_plural:
             self.demonstrative_article = "ces"
-
 
     def get_noun_with_indef_article(self):
         return self.indef_article + " " + self.noun
