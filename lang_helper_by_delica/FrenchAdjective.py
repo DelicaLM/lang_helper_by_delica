@@ -35,3 +35,6 @@ class FrenchAdjective(Adjective):
                 masc_plur_form = masc_sing_form + "s"
         super().__init__(masc_sing_form, english_def=english_def, before_verb=before_verb, fem_sing_form=fem_sing_form,
                          fem_plur_form=fem_plur_form, masc_sing_form=masc_sing_form, masc_plur_form=masc_plur_form)
+
+    def print_forms(self):
+        print(self.adj, f"({self.eng})")
