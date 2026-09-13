@@ -7,6 +7,7 @@ class Adjective(Word):
         super().__init__(adj, english_def)
         self.adj = adj
         self.before_verb = before_verb
+        self.is_invariable = is_invariable
         self.is_loan_word = is_loan_word
         if is_invariable:
             self.masc_sing_form = self.adj

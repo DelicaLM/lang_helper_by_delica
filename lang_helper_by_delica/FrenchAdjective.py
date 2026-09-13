@@ -2,7 +2,8 @@ from lang_helper_by_delica.Adjective import Adjective
 
 
 class FrenchAdjective(Adjective):
-    def __init__(self, adj : str, english_def : str = "", before_verb : bool = False, is_invariable : bool = False, masc_plur_form : str = "",
+    def __init__(self, adj : str, english_def : str = "", before_verb : bool = False, is_invariable : bool = False,
+                 is_loan_word : bool = False, masc_plur_form : str = "",
                  fem_sing_form : str ="", fem_plur_form : str = ""):
         masc_sing_form = adj
         if is_invariable:
@@ -40,11 +41,21 @@ class FrenchAdjective(Adjective):
                     masc_plur_form = masc_sing_form[:-1] + "ux"
                 else:
                     masc_plur_form = masc_sing_form + "s"
-        super().__init__(masc_sing_form, english_def=english_def, before_verb=before_verb, fem_sing_form=fem_sing_form,
-                         fem_plur_form=fem_plur_form, masc_sing_form=masc_sing_form, masc_plur_form=masc_plur_form)
+        super().__init__(masc_sing_form, english_def=english_def, before_verb=before_verb, is_invariable=is_invariable,
+                         is_loan_word=is_loan_word, fem_sing_form=fem_sing_form, fem_plur_form=fem_plur_form,
+                         masc_sing_form=masc_sing_form, masc_plur_form=masc_plur_form)
 
     def print_forms(self):
         print(self.adj, f"({self.eng})")
+        if self.is_invariable or self.is_loan_word:
+            special_string = "Special Characteristics: "
+            if self.is_invariable:
+                special_string += "invariable"
+            if self.is_loan_word:
+                if self.is_invariable:
+                    special_string += ", "
+                special_string += "loan word"
+            print(special_string)
         if self.before_verb:
             print("Masculin Singulier:", self.masc_sing_form, "(e.g., Il est un", self.masc_sing_form, "homme.)")
         else:
