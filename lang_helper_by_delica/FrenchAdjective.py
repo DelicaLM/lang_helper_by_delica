@@ -38,3 +38,7 @@ class FrenchAdjective(Adjective):
 
     def print_forms(self):
         print(self.adj, f"({self.eng})")
+        print("Masculin Singulier:", self.masc_sing_form, "(e.g., Il est", self.masc_sing_form)
+        print("Féminin Singulier:", self.fem_sing_form)
+        print("Masculin Pluriel:", self.masc_plur_form)
+        print("Féminin Pluriel:", self.fem_plur_form)
