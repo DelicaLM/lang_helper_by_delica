@@ -16,5 +16,5 @@ class SpanishVerb(Verb):
         print("Él/Ella  ", self.third_per_sing)
         print("Nosotros ", self.first_per_plur)
         print("Vosotros ", self.second_per_plur)
-        print("Ils/Elles", self.third_per_plur)
+        print("Ellos/Ellas", self.third_per_plur)
         print("")
