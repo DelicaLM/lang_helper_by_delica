@@ -3,8 +3,9 @@ from lang_helper_by_delica.Adjective import Adjective
 
 class SpanishAdjective(Adjective):
     def __init__(self, adj : str, english_def : str = "", before_verb : bool = False, is_invariable : bool = False,
-                 is_loan_word : bool = False, masc_plur_form : str = "",
+                 is_loan_word : bool = False, uses_soy : bool = True, masc_plur_form : str = "",
                  fem_sing_form : str ="", fem_plur_form : str = ""):
+        self.uses_soy = uses_soy
         masc_sing_form = adj
         if is_invariable:
             masc_plur_form = masc_sing_form
@@ -13,6 +14,8 @@ class SpanishAdjective(Adjective):
         else:
             if fem_sing_form == "":
                 if adj.endswith("e"):
+                    fem_sing_form = masc_sing_form
+                elif adj.endswith("l"):
                     fem_sing_form = masc_sing_form
                 else:
                     fem_sing_form = masc_sing_form[:-1] + "a"
@@ -35,9 +38,15 @@ class SpanishAdjective(Adjective):
                 # else:
                 #     fem_sing_form = adj + "e"
             if fem_plur_form == "":
-                fem_plur_form = fem_sing_form + "s"
+                if fem_sing_form.endswith("l"):
+                    fem_plur_form = fem_sing_form + "es"
+                else:
+                    fem_plur_form = fem_sing_form + "s"
             if masc_plur_form == "":
-                masc_plur_form = masc_sing_form + "s"
+                if masc_sing_form.endswith("l"):
+                    masc_plur_form = masc_sing_form + "es"
+                else:
+                    masc_plur_form = masc_sing_form + "s"
                 # if masc_sing_form.endswith("x") or masc_sing_form.endswith("s"):
                 #     masc_plur_form = masc_sing_form
                 # elif adj.endswith("eau"):
@@ -61,8 +70,14 @@ class SpanishAdjective(Adjective):
                     special_string += ", "
                 special_string += "loan word"
             print(special_string)
-        if self.before_verb:
+        if not self.uses_soy:
+            print("Masculino Singular:", self.masc_sing_form, "(e.g., Él está", f"{self.masc_sing_form}.)")
+
+        elif self.before_verb:
             print("Masculino Singular:", self.masc_sing_form, "(e.g., Él es un ", self.masc_sing_form, "hombre.)")
+            print("Femenino Singular:", self.fem_sing_form, "(e.g., Ella es una", self.fem_sing_form, "mujer.)")
+            print("Masculino Plural:", self.masc_plur_form, "(e.g., Ellos son unos", self.masc_plur_form, "hombres.)")
+            print("Femenino Plural:", self.fem_plur_form, "(e.g., Ellas son unas", self.fem_plur_form, "mujeres.)")
         else:
             print("Masculino Singular:", self.masc_sing_form, "(e.g., Él es un hombre", f"{self.masc_sing_form}.)")
         if self.before_verb:
