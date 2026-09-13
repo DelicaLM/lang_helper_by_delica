@@ -38,7 +38,19 @@ class FrenchAdjective(Adjective):
 
     def print_forms(self):
         print(self.adj, f"({self.eng})")
-        print("Masculin Singulier:", self.masc_sing_form, "(e.g., Il est", self.masc_sing_form)
-        print("Féminin Singulier:", self.fem_sing_form)
-        print("Masculin Pluriel:", self.masc_plur_form)
-        print("Féminin Pluriel:", self.fem_plur_form)
+        if self.before_verb:
+            print("Masculin Singulier:", self.masc_sing_form, "(e.g., Il est un", self.masc_sing_form, "homme.)")
+        else:
+            print("Masculin Singulier:", self.masc_sing_form, "(e.g., Il est un homme", f"{self.masc_sing_form}.)")
+        if self.before_verb:
+            print("Féminin Singulier:", self.fem_sing_form, "(e.g., Elle est une", self.fem_sing_form, "femme.)")
+        else:
+            print("Féminin Singulier:", self.fem_sing_form, "(e.g., Elle est une femme", f"{self.fem_sing_form}.)")
+        if self.before_verb:
+            print("Masculin Pluriel:", self.masc_plur_form, "(e.g., Ils sont des", self.masc_plur_form, "hommes.)")
+        else:
+            print("Masculin Pluriel:", self.masc_plur_form, "(e.g., Ils sont des hommes", f"{self.masc_plur_form}.)")
+        if self.before_verb:
+            print("Féminin Pluriel:", self.fem_plur_form, "(e.g., Elles sont des", self.fem_plur_form, "femmes.)")
+        else:
+            print("Féminin Pluriel:", self.fem_plur_form, "(e.g., Elles sont des femmes", f"{self.fem_plur_form}.)")
