@@ -3,9 +3,9 @@ from lang_helper_by_delica.Adjective import Adjective
 
 class SpanishAdjective(Adjective):
     def __init__(self, adj : str, english_def : str = "", before_verb : bool = False, is_invariable : bool = False,
-                 is_loan_word : bool = False, uses_soy : bool = True, masc_plur_form : str = "",
+                 is_loan_word : bool = False, uses_ser : bool = True, masc_plur_form : str = "",
                  fem_sing_form : str ="", fem_plur_form : str = ""):
-        self.uses_soy = uses_soy
+        self.uses_ser = uses_ser
         masc_sing_form = adj
         if is_invariable:
             masc_plur_form = masc_sing_form
@@ -70,9 +70,11 @@ class SpanishAdjective(Adjective):
                     special_string += ", "
                 special_string += "loan word"
             print(special_string)
-        if not self.uses_soy:
+        if not self.uses_ser:
             print("Masculino Singular:", self.masc_sing_form, "(e.g., Él está", f"{self.masc_sing_form}.)")
-
+            print("Femenino Singular:", self.fem_sing_form, "(e.g., Ella está", f"{self.fem_sing_form}.)")
+            print("Masculino Plural:", self.masc_plur_form, "(e.g., Ellos están", f"{self.masc_plur_form}.)")
+            print("Femenino Plural:", self.fem_plur_form, "(e.g., Ellas están", f"{self.fem_plur_form}.)")
         elif self.before_verb:
             print("Masculino Singular:", self.masc_sing_form, "(e.g., Él es un ", self.masc_sing_form, "hombre.)")
             print("Femenino Singular:", self.fem_sing_form, "(e.g., Ella es una", self.fem_sing_form, "mujer.)")
@@ -80,15 +82,18 @@ class SpanishAdjective(Adjective):
             print("Femenino Plural:", self.fem_plur_form, "(e.g., Ellas son unas", self.fem_plur_form, "mujeres.)")
         else:
             print("Masculino Singular:", self.masc_sing_form, "(e.g., Él es un hombre", f"{self.masc_sing_form}.)")
-        if self.before_verb:
-            print("Femenino Singular:", self.fem_sing_form, "(e.g., Ella es una", self.fem_sing_form, "mujer.)")
-        else:
             print("Femenino Singular:", self.fem_sing_form, "(e.g., Ella est une mujer", f"{self.fem_sing_form}.)")
-        if self.before_verb:
-            print("Masculino Plural:", self.masc_plur_form, "(e.g., Ellos son unos", self.masc_plur_form, "hombres.)")
-        else:
             print("Masculino Plural:", self.masc_plur_form, "(e.g., Ellos son unos hombres", f"{self.masc_plur_form}.)")
-        if self.before_verb:
-            print("Femenino Plural:", self.fem_plur_form, "(e.g., Ellas son unas", self.fem_plur_form, "mujeres.)")
-        else:
             print("Femenino Plural:", self.fem_plur_form, "(e.g., Ellas son unas mujeres", f"{self.fem_plur_form}.)")
+        # if self.before_verb:
+        #     print("Femenino Singular:", self.fem_sing_form, "(e.g., Ella es una", self.fem_sing_form, "mujer.)")
+        # else:
+        #     print("Femenino Singular:", self.fem_sing_form, "(e.g., Ella est une mujer", f"{self.fem_sing_form}.)")
+        # if self.before_verb:
+        #     print("Masculino Plural:", self.masc_plur_form, "(e.g., Ellos son unos", self.masc_plur_form, "hombres.)")
+        # else:
+        #     print("Masculino Plural:", self.masc_plur_form, "(e.g., Ellos son unos hombres", f"{self.masc_plur_form}.)")
+        # if self.before_verb:
+        #     print("Femenino Plural:", self.fem_plur_form, "(e.g., Ellas son unas", self.fem_plur_form, "mujeres.)")
+        # else:
+        #     print("Femenino Plural:", self.fem_plur_form, "(e.g., Ellas son unas mujeres", f"{self.fem_plur_form}.)")
